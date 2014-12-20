@@ -5,4 +5,17 @@ set -e
 npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
+export REDISTOGO_URL="redis://localhost:6379"
+
+export HUBOT_IRC_SERVER="pcln-fit.irc.slack.com"
+export HUBOT_IRC_USESSL="true"
+export HUBOT_IRC_ROOMS="#general"
+export HUBOT_ANNOUNCE_ROOMS=$HUBOT_IRC_ROOMS
+export HUBOT_IRC_NICK=jaybot
+export HUBOT_IRC_PASSWORD="pcln-fit.0Jo8g7LkBn1h685CJbax"
+export HUBOT_IRC_PORT=6667
+export HUBOT_IRC_UNFLOOD="true"
+
+export FORECAST_IO_API_KEY=2a757ca3116209d20039e3e9bac1aae2
+
 exec node_modules/.bin/hubot "$@"
