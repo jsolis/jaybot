@@ -18,7 +18,11 @@
     "hubot-irc": "~0.2.7",
     "hubot-scripts": "~2.5.16",
     "hubot": "~2.10.0",
-    "hubot-maps": "0.0.1"
+    "hubot-maps": "0.0.1",
+    "hubot-sentimental": "~1.0.3",
+    "hubot-forecastio": "~1.0.1",
+    "hubot-wolfram": "~1.0.7",
+    "hubot-panerabread": "~1.0.0"
   },
   "engines": {
     "node": "0.10.x"
