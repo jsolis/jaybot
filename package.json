@@ -22,7 +22,9 @@
     "hubot-sentimental": "~1.0.3",
     "hubot-forecastio": "~1.0.1",
     "hubot-wolfram": "~1.0.7",
-    "hubot-panerabread": "~1.0.0"
+    "hubot-panerabread": "~1.0.0",
+    "hubot-xmpp": "~0.1.12",
+    "hubot-hipchat": "~2.7.5"
   },
   "engines": {
     "node": "0.10.x"
