@@ -18,4 +18,6 @@ export HUBOT_IRC_UNFLOOD="true"
 
 export FORECAST_IO_API_KEY=2a757ca3116209d20039e3e9bac1aae2
 
+export HUBOT_WOLFRAM_APPID=XWQW3L-RXKL2QLJPL
+
 exec node_modules/.bin/hubot "$@"
