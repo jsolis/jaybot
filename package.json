@@ -20,7 +20,7 @@
     "hubot": "~2.10.0",
     "hubot-maps": "0.0.1",
     "hubot-sentimental": "~1.0.3",
-    "hubot-forecastio": "~1.0.1",
+    "hubot-forecastio": "1.1.1",
     "hubot-wolfram": "~1.0.7",
     "hubot-panerabread": "~1.0.0",
     "hubot-xmpp": "~0.1.12",
