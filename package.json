@@ -1,5 +1,5 @@
 {
-  "name": "hubot",
+  "name": "jaybot",
   "version": "0.0.0",
   "private": true,
   "author": "jsolis",
@@ -16,7 +16,7 @@
     "hubot-redis-brain": "0.0.2",
     "hubot-irc": "~0.2.7",
     "hubot-scripts": "~2.5.16",
-    "hubot": "~2.10.0",
+    "hubot": "~2.16.0",
     "hubot-maps": "0.0.1",
     "hubot-sentimental": "~1.0.6",
     "hubot-forecastio": "1.1.1",
