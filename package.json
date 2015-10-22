@@ -18,7 +18,7 @@
     "hubot-scripts": "~2.5.16",
     "hubot": "~2.10.0",
     "hubot-maps": "0.0.1",
-    "hubot-sentimental": "~1.0.3",
+    "hubot-sentimental": "~1.0.6",
     "hubot-forecastio": "1.1.1",
     "hubot-wolfram": "~1.0.7",
     "hubot-panerabread": "~1.0.0",
