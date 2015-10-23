@@ -10,6 +10,7 @@
     "hubot-forecastio": "1.1.1",
     "hubot-google-images": "~0.1.2",
     "hubot-google-translate": "~0.1.0",
+    "hubot-hear-say": "^1.0.0",
     "hubot-help": "~0.1.1",
     "hubot-hipchat": "~2.7.5",
     "hubot-irc": "~0.2.7",
