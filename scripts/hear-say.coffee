@@ -18,24 +18,60 @@
 # Author:
 #  jsolis
 
+class HearSay
+  constructor: (@robot) ->
+    @cache = []
+    @robot.brain.on 'loaded', =>
+      if @robot.brain.data.hearsay
+        @cache = @robot.brain.data.hearsay
+  add: (pattern, action) ->
+    task = {key: pattern, task: action}
+    @cache.push task
+    @robot.brain.data.hearsay = @cache
+  all: -> @cache
+  deleteByPattern: (pattern) ->
+    @cache = @cache.filter (n) -> n.key != pattern
+    @robot.brain.data.hearsay = @cache
+  deleteAll: () ->
+    @cache = []
+    @robot.brain.data.hearsay = @cache
+
 module.exports = (robot) ->
+
+  hearsay = new HearSay robot
 
   robot.respond /hear ([\w-]+) say (.+)/i, (res) ->
     hear = res.match[1]
     say = res.match[2]
 
+    hearsay.add(hear, say)
+
     res.send "Added #{hear} -> #{say}"
 
   robot.respond /list hear/i, (res) ->
-    res.send "list to go here"
+    response = ""
+    for task in hearsay.all()
+      response += "#{task.key} -> #{task.task}\n"
+    res.send response
 
   robot.respond /delete hear ([\w-]+)/i, (res) ->
     hear = res.match[1]
+
+    hearsay.deleteByPattern hear
 
     res.send "Deleted #{hear}"
 
   robot.hear /(.+)/i, (res) ->
     heard = res.match[1]
 
-    if (robot.name != res.message.user.name && !(new RegExp("^#{robot.name}", "i").test(heard)))
-      res.send "TODO - process #{heard}"
+    tasks = hearsay.all()
+
+    tasksToRun = []
+    for task in tasks
+      if (new RegExp(task.key, "i").test(heard) && robot.name != res.message.user.name && !(new RegExp("^#{robot.name}", "i").test(heard)))
+        tasksToRun.push task
+
+    for task in tasksToRun
+      res.send task.task
+
+
